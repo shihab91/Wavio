@@ -8,7 +8,7 @@ import "./Login.css";
 const Login = () => {
   const location = useLocation();
   const history = useHistory();
-  const { singInUser, user, error } = useAuth();
+  const { singInUser, error } = useAuth();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     singInUser(data, location, history);

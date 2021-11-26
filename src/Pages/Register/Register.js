@@ -8,7 +8,7 @@ const Register = () => {
   const { register, handleSubmit } = useForm();
   const location = useLocation();
   const history = useHistory();
-  const { createNewUser, user, error } = useAuth();
+  const { createNewUser, error } = useAuth();
   const onSubmit = (data) => {
     createNewUser(data, location, history);
   };

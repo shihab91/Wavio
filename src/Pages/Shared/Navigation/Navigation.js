@@ -22,12 +22,12 @@ const Navigation = () => {
     fontSize: "40px",
     cursor: "pointer",
   };
-  const navbar = {
-    background: "#EDF9FF",
-  };
+  // const navbar = {
+  //   background: "#EDF9FF",
+  // };
   const history = useHistory();
   return (
-    <Box className="navbar" style={navbar}>
+    <Box className="navbar">
       <Container sx={{ py: 3, mb: 5 }}>
         <Box
           sx={{
@@ -41,7 +41,7 @@ const Navigation = () => {
             <NavLink to="/home">
               <img
                 style={{ width: "100px", height: "50px" }}
-                src="https://i.ibb.co/hY2PgvX/Wavio.png"
+                src="https://previews.dropbox.com/p/thumb/ABUEgeQ_4mJUNG3iKg8BUmk8TtB1HIgwc-02w21_MtjPBJcvLsmrqrELk132hSTNYbSXXr1g22zJaw0mygTNCuAY1uePcYku1Q1Q6_uhYxdhki0AzIiC56NURJPTY4Xdvdl4ambVdJ75AO5ghBhrnqZAsMFjyec3Np2t9IGlZrJD1hOzH8TToOniGh8CM0621ZGdl6wL1Dw72epigEPtQdYW9aRSgDNHA8w-pxighHU4xsyWgpy1fNq26a4hPc8KozgA8FLx1QBHFaSyOU9eZ9NdETAJFw9bkfDy_MzR_H3jgAeOK-vndSCsWzq_59KDSa8gMWSZZ8GqWRqNEnEt_yqhMuNB09_Tan2LqzVtuKI6NA/p.png"
                 alt=""
               />
             </NavLink>
@@ -93,7 +93,7 @@ const Navigation = () => {
                     justifyContent: "center",
                   }}
                 >
-                  <Button style={buttonStyle} >{user?.displayName}</Button>
+                  <Button style={buttonStyle}>{user?.displayName}</Button>
                   <Button
                     style={buttonStyle}
                     variant="contained"

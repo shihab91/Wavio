@@ -11,7 +11,7 @@ const HomeBanner = () => {
     backgroundColor: "white",
   };
   return (
-    <Container>
+    <Container sx={{ pb: 6 }}>
       <Grid container spacing={4}>
         <Grid
           item
@@ -100,7 +100,7 @@ const HomeBanner = () => {
         >
           <img
             style={{ width: "70%" }}
-            src="https://i.ibb.co/mHtBR9L/netclipart-1-516x1024.png"
+            src="https://previews.dropbox.com/p/thumb/ABXVG8BGuDIQR3Fcl94Z3ES-S8sEJXRHjhWbDEDa2Qwm1ugVl3GC9jg4ePdeW7t2MNuz7plP8mvPLS8jfOVmiXW-ZudrG505-XBhafaeINHBUG8ZxsXt5Jb-9kBIQZsUbA4voHZwWkhzE4il8oJFoYtG3-9WeVdi6pWWtC8a3N2mGtAz8kjLhdxJ7Gu7OP4Uf46J4-UAtufqTNJfhFh-X8KjzSkUp2kso0oosYRsUYLcuUj-qBENUV4FsBPcm79NkuZZddsA5pZ7QYxvgo8eIhiNSjOKOz49btyQ6tFMnzNVfCrA1pSol4Ug_REeziqo37IYdXarl9W0WZfCRIqmAyo3qb2iHykMuH6wAVyjE9nc9w/p.png"
             alt=""
           />
         </Grid>

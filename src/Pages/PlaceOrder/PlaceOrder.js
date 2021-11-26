@@ -9,7 +9,7 @@ import Footer from "../Shared/Footer/Footer";
 import Navigation from "../Shared/Navigation/Navigation";
 
 const PlaceOrder = () => {
-  const { user, setError, error } = useAuth();
+  const { user, error } = useAuth();
   const { reset, register, handleSubmit } = useForm();
   const { id } = useParams();
   const [orderedProduct, setOrderedProduct] = useState({});
