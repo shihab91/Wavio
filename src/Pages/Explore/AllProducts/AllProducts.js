@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import Product from "../../Shared/product/product";
-// import { useHistory } from "react-router-dom";
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -11,7 +11,11 @@ const AllProducts = () => {
   }, []);
   return (
     <Container sx={{ my: 10 }}>
-      <Product products={products} sliceNumber={10}></Product>
+      {products.length ? (
+        <Product products={products} sliceNumber={products.length}></Product>
+      ) : (
+        <CircularProgress sx={{ mt: 50 }} />
+      )}
     </Container>
   );
 };

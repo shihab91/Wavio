@@ -8,7 +8,7 @@ import "./Login.css";
 const Login = () => {
   const location = useLocation();
   const history = useHistory();
-  const { singInUser, error } = useAuth();
+  const { singInUser, error, singInWithGoogle } = useAuth();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     singInUser(data, location, history);
@@ -24,7 +24,11 @@ const Login = () => {
       }}
     >
       <Box
-        sx={{ width: { xs: "90%", sm: "80%", md: "40%" }, p: 10 }}
+        sx={{
+          width: { xs: "90%", sm: "80%", md: "40%" },
+          px: { xs: 4, sm: 7, md: 10 },
+          py: 9,
+        }}
         className="login-form-box"
       >
         <Typography
@@ -67,6 +71,12 @@ const Login = () => {
             placeholder="password"
           />
           <Button type="submit">Login</Button>
+          <Button
+            sx={{ mt: 2 }}
+            onClick={() => singInWithGoogle(history, location)}
+          >
+            Sign In with Google
+          </Button>
           <NavLink
             style={{ marginTop: "20px", color: "var(--color)" }}
             to="/register"

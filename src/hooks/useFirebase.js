@@ -6,6 +6,8 @@ import {
   updateProfile,
   signInWithEmailAndPassword,
   signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 
@@ -15,8 +17,9 @@ const useFirebase = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [adminLoading, setAdminLoading] = useState(true);
-  const [admin, setAdmin] = useState(false)
+  const [admin, setAdmin] = useState(false);
   const auth = getAuth();
+  const googleProvider = new GoogleAuthProvider();
   // create a new user
   const createNewUser = ({ name, email, password }, location, history) => {
     console.log(name, email, password);
@@ -26,11 +29,11 @@ const useFirebase = () => {
         updateProfile(auth.currentUser, {
           displayName: name,
         })
-          .then(() => { })
+          .then(() => {})
           .catch((error) => {
             setError(error.message);
           });
-        saveUserToDB(name, email)
+        saveUserToDB(name, email);
         const destination = location?.state?.from;
         history.replace(destination || "/");
         setUser(user);
@@ -38,7 +41,9 @@ const useFirebase = () => {
       .catch((error) => {
         setError(error.message);
       })
-      .finally(() => { setIsLoading(false) });
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
   // sign in a user with firebase authentication
   const singInUser = ({ email, password }, location, history) => {
@@ -56,6 +61,15 @@ const useFirebase = () => {
         setIsLoading(false);
       });
   };
+  // sing in with google authentication
+  const singInWithGoogle = (history, location) => {
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        setUser(result.user);
+        history.replace(location?.state?.from || "/home");
+      })
+      .then((err) => setError(err?.message));
+  };
   // sign out a user with firebase authentication
   const signOutUser = (history) => {
     signOut(auth)
@@ -70,7 +84,6 @@ const useFirebase = () => {
         setIsLoading(false);
       });
   };
-  console.log(user)
   // observe the user
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (user) => {
@@ -78,9 +91,9 @@ const useFirebase = () => {
         setUser(user);
         setAdminLoading(true);
         fetch(`https://dry-springs-50521.herokuapp.com/users/${user?.email}`)
-          .then(res => res.json())
-          .then(data => setAdmin(data.admin))
-          .finally(() => setAdminLoading(false))
+          .then((res) => res.json())
+          .then((data) => setAdmin(data.admin))
+          .finally(() => setAdminLoading(false));
       } else {
         setUser({});
       }
@@ -104,13 +117,14 @@ const useFirebase = () => {
   return {
     createNewUser,
     singInUser,
+    singInWithGoogle,
+    signOutUser,
+    setError,
     user,
     error,
-    signOutUser,
     isLoading,
-    setError,
     admin,
-    adminLoading
+    adminLoading,
   };
 };
 export default useFirebase;
