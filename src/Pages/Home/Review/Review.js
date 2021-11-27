@@ -18,6 +18,7 @@ const Review = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    arrows: false,
   };
   return (
     <Container sx={{ my: 12 }}>

@@ -14,7 +14,7 @@ const AllProducts = () => {
       {products.length ? (
         <Product products={products} sliceNumber={products.length}></Product>
       ) : (
-        <CircularProgress sx={{ mt: 50 }} />
+        <CircularProgress sx={{ my: 20 }} />
       )}
     </Container>
   );

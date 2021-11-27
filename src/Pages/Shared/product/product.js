@@ -35,7 +35,7 @@ const AllProducts = ({ products, sliceNumber }) => {
           <Grid key={product._id} item spacing={3} xs={12} sm={6} md={4}>
             <Card
               sx={{
-                maxWidth: 345,
+                maxWidth: 325,
                 boxShadow: 2,
                 mx: "auto",
                 borderRadius: "20px",
