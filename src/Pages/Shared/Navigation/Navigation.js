@@ -22,12 +22,12 @@ const Navigation = () => {
     fontSize: "40px",
     cursor: "pointer",
   };
-  // const navbar = {
-  //   background: "#EDF9FF",
-  // };
+  const navbar = {
+    background: "#EDF9FF",
+  };
   const history = useHistory();
   return (
-    <Box className="navbar">
+    <Box className="navbar" style={navbar}>
       <Container sx={{ py: 3, mb: 5 }}>
         <Box
           sx={{
