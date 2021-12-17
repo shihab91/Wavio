@@ -25,7 +25,7 @@ import ManageAllProducts from "../ForAdmin/ManageAllOrders/ManageAllOrders";
 import AddProduct from "../ForAdmin/AddProduct/AddProduct";
 import MakeAdmin from "../ForAdmin/MakeAdmin/MakeAdmin";
 import ManageProducts from "../ForAdmin/ManageProducts/ManageProducts";
-
+import "./Dashboard.css";
 const drawerWidth = 240;
 
 function Dashboard(props) {
@@ -38,15 +38,13 @@ function Dashboard(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const activeStyle = {
-    color: "var(--color)",
-  };
   const dashboardLink = {
-    // textAlign: "left"
+    textAlign: "left",
+    position: "10px 5px",
   };
   const dashboardButton = {
     fontSize: "15px",
-    color: "var(--blue-color)",
+    color: "var(--color)",
     fontWeight: "bold",
     margin: "8px 0",
   };
@@ -59,6 +57,7 @@ function Dashboard(props) {
         display: "flex",
         justifyContent: "center",
       }}
+      className="dashboard-drawer"
     >
       <Toolbar />
       {user?.email && admin ? (
@@ -69,45 +68,30 @@ function Dashboard(props) {
             flexDirection: "column",
             ml: -8,
             mt: 25,
+            textTransform: "none",
           }}
         >
-          <NavLink activeStyle={activeStyle} style={dashboardLink} to={`/`}>
+          <NavLink style={dashboardLink} to={`/`}>
             <Button color="inherit" style={dashboardButton}>
               Home
             </Button>
           </NavLink>
-          <NavLink
-            activeStyle={activeStyle}
-            style={dashboardLink}
-            to={`${url}/manageAllOrders`}
-          >
+          <NavLink style={dashboardLink} to={`${url}/manageAllOrders`}>
             <Button color="inherit" style={dashboardButton}>
               Manage All Orders
             </Button>
           </NavLink>
-          <NavLink
-            activeStyle={activeStyle}
-            style={dashboardLink}
-            to={`${url}/AddProduct`}
-          >
+          <NavLink style={dashboardLink} to={`${url}/AddProduct`}>
             <Button color="inherit" style={dashboardButton}>
               Add a product
             </Button>
           </NavLink>
-          <NavLink
-            activeStyle={activeStyle}
-            style={dashboardLink}
-            to={`${url}/makeAdmin`}
-          >
+          <NavLink style={dashboardLink} to={`${url}/makeAdmin`}>
             <Button color="inherit" style={dashboardButton}>
               Make Admin
             </Button>
           </NavLink>
-          <NavLink
-            activeStyle={activeStyle}
-            style={dashboardLink}
-            to={`${url}/manageProducts`}
-          >
+          <NavLink style={dashboardLink} to={`${url}/manageProducts`}>
             <Button color="inherit" style={dashboardButton}>
               Manage Products
             </Button>
@@ -133,34 +117,22 @@ function Dashboard(props) {
             textTransform: "none",
           }}
         >
-          <NavLink activeStyle={activeStyle} style={dashboardLink} to={`/`}>
+          <NavLink style={dashboardLink} to={`/`}>
             <Button color="inherit" style={dashboardButton}>
               Home
             </Button>
           </NavLink>
-          <NavLink
-            activeStyle={activeStyle}
-            style={dashboardLink}
-            to={`${url}/myOrders`}
-          >
+          <NavLink style={dashboardLink} to={`${url}/myOrders`}>
             <Button color="inherit" style={dashboardButton}>
               My Orders
             </Button>
           </NavLink>
-          <NavLink
-            activeStyle={activeStyle}
-            style={dashboardLink}
-            to={`${url}/pay`}
-          >
+          <NavLink style={dashboardLink} to={`${url}/pay`}>
             <Button color="inherit" style={dashboardButton}>
               Pay
             </Button>
           </NavLink>
-          <NavLink
-            activeStyle={activeStyle}
-            style={dashboardLink}
-            to={`${url}/review`}
-          >
+          <NavLink style={dashboardLink} to={`${url}/review`}>
             <Button color="inherit" style={dashboardButton}>
               Review
             </Button>
@@ -208,7 +180,7 @@ function Dashboard(props) {
             component="div"
             sx={{ color: "var(--blue-color)", py: 3 }}
           >
-            WIVO Dashboard
+            Wavio Dashboard
           </Typography>
         </Toolbar>
       </AppBar>

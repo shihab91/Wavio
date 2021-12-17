@@ -11,7 +11,7 @@ const HomeBanner = () => {
     backgroundColor: "white",
   };
   return (
-    <Container sx={{ pb: 6 }}>
+    <Container sx={{ pb: 8, pt: 8 }}>
       <Grid container spacing={4}>
         <Grid
           item

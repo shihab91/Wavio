@@ -22,7 +22,6 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
   // create a new user
   const createNewUser = ({ name, email, password }, location, history) => {
-    console.log(name, email, password);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
