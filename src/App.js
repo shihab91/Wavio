@@ -12,6 +12,8 @@ import ProductDetailPage from "./Pages/ProductDetail/ProductDetailPage/ProductDe
 import NotFound from "./Pages/Shared/NotFound/NotFound";
 import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import MessengerCustomerChat from "react-messenger-customer-chat";
+
 function App() {
   return (
     <div className="App">
@@ -48,6 +50,7 @@ function App() {
           </Switch>
         </Router>
       </AuthProvider>
+      <MessengerCustomerChat pageId="108545738134237" appId="965985537670437" />
     </div>
   );
 }

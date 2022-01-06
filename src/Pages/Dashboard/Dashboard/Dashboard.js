@@ -63,7 +63,7 @@ function Dashboard(props) {
       {user?.email && admin ? (
         <Box
           sx={{
-            fontFamily: "var(--dusis-font)",
+            fontFamily: "var(--dosis-font)",
             display: "flex",
             flexDirection: "column",
             ml: -8,
@@ -109,7 +109,7 @@ function Dashboard(props) {
       ) : (
         <Box
           sx={{
-            fontFamily: "var(--dusis-font)",
+            fontFamily: "var(--dosis-font)",
             display: "flex",
             flexDirection: "column",
             ml: -8,
