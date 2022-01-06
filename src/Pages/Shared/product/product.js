@@ -72,6 +72,8 @@ const AllProducts = ({ products, sliceNumber }) => {
                 <Typography
                   variant="h5"
                   color="var(--color)"
+                  marginTop="10px"
+                  marginBottom="10px"
                   style={bannerFontStyle}
                   component="p"
                 >
