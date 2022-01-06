@@ -12,7 +12,7 @@ const Review = () => {
       .then((data) => setReviews(data));
   }, []);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -29,10 +29,11 @@ const Review = () => {
           sx={{
             fontFamily: "var(--dosis-font )",
             fontWeight: 600,
-            my: 4,
+            my: 8,
           }}
         >
-          WHAT OUR <span style={{ color: "var(--blue-color)" }}>CUSTOMER'S SAY</span>
+          WHAT OUR{" "}
+          <span style={{ color: "var(--blue-color)" }}>CUSTOMER'S SAY</span>
         </Typography>
       </Box>
       <Slider {...settings}>
@@ -49,8 +50,12 @@ const Review = () => {
             }}
             className="review-card"
           >
-            <Grid container spacing={3} sx={{ p: { xs: "15px 25px", md: "50px 80px" } }}>
-              <Grid item xs={12} lg={4} >
+            <Grid
+              container
+              spacing={3}
+              sx={{ p: { xs: "15px 25px", md: "50px 80px" } }}
+            >
+              <Grid item xs={12} lg={4}>
                 <img
                   src={review.image}
                   width="240px"
@@ -95,7 +100,7 @@ const Review = () => {
                     p: "20px 15px",
                     borderRadius: "7px",
                     fontSize: "17px",
-                    mt: 2
+                    mt: 2,
                   }}
                 >
                   {review.reviewText.slice(0, 150) + "..."}

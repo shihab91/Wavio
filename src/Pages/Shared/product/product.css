@@ -1,0 +1,4 @@
+.product-card-button:hover {
+  background-color: var(--color);
+  color: white;
+}

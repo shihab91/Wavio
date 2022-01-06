@@ -9,25 +9,33 @@ import {
 } from "@mui/material";
 import Rating from "react-rating";
 import { useHistory } from "react-router-dom";
+import "./product.css";
 const AllProducts = ({ products, sliceNumber }) => {
   const history = useHistory();
   const bannerFontStyle = {
-    fontFamily: "var(--dosis-font)",
+    fontFamily: "var(--nunito-font)",
     fontWeight: "600",
   };
   return (
     <>
-      <Box sx={{ mb: 4 }}>
+      <Box sx={{ mb: 4, pt: 10 }}>
         <Typography
           variant="h2"
           gutterBottom
           style={bannerFontStyle}
           sx={{ color: "var(--color)" }}
         >
-          CHOOSE YOUR WATER
+          CHOOSE YOUR WATER BOTTLE
         </Typography>
-        <Typography variant="body1" gutterBottom style={bannerFontStyle}>
-          BOTTLES WE DELIVER
+        <Typography
+          variant="body1"
+          gutterBottom
+          style={{
+            fontFamily: "var(--nunito-font)",
+            fontSize: "20px",
+          }}
+        >
+          WATER BOTTLES WE DELIVER
         </Typography>
       </Box>
       <Grid container spacing={3}>
@@ -56,12 +64,17 @@ const AllProducts = ({ products, sliceNumber }) => {
                 <Typography
                   style={bannerFontStyle}
                   gutterBottom
-                  variant="h5"
-                  component="h5"
+                  variant="h6"
+                  component="h6"
                 >
                   {product.name}
                 </Typography>
-                <Typography variant="h5" style={bannerFontStyle} component="p">
+                <Typography
+                  variant="h5"
+                  color="var(--color)"
+                  style={bannerFontStyle}
+                  component="p"
+                >
                   $ {product.price}
                 </Typography>
                 <Rating
@@ -82,8 +95,9 @@ const AllProducts = ({ products, sliceNumber }) => {
                     borderRadius: 20,
                     fontSize: 16,
                     px: 4,
-                    py: 1,
+                    py: 0.7,
                   }}
+                  className="product-card-button"
                   onClick={() => {
                     history.push(`/explore/${product._id}`);
                   }}

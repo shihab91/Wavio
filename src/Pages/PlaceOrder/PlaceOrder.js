@@ -21,7 +21,6 @@ const PlaceOrder = () => {
         setOrderedProduct(rest);
       });
   }, [id]);
-  console.log(orderedProduct);
   const onSubmit = (data) => {
     let newData = { ...data, ...orderedProduct, status: "pending" };
     fetch("https://dry-springs-50521.herokuapp.com/orders", {

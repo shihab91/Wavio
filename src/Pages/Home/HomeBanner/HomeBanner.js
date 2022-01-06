@@ -11,7 +11,7 @@ const HomeBanner = () => {
     backgroundColor: "white",
   };
   return (
-    <Container sx={{ pb: 8, pt: 8 }}>
+    <Container sx={{ py: 10 }}>
       <Grid container spacing={4}>
         <Grid
           item
@@ -38,7 +38,7 @@ const HomeBanner = () => {
             </Typography>
           </Box>
           <Typography
-            sx={{ textAlign: "left", mt: 2 }}
+            sx={{ fontFamily: "var(--nunito-font)", textAlign: "left", mt: 2 }}
             variant="h6"
             gutterBottom
           >

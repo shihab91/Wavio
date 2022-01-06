@@ -26,7 +26,7 @@ const Navigation = () => {
   const history = useHistory();
   return (
     <Box className="navbar">
-      <Container sx={{ py: 3, mb: 5 }}>
+      <Container sx={{ pb: 3, pt: 5, mb: 5 }}>
         <Box
           sx={{
             display: "flex",
