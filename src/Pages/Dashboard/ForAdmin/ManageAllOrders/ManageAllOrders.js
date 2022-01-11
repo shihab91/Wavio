@@ -42,7 +42,6 @@ const ManageAllProducts = () => {
   };
   const buttonStyle = {
     mt: 2,
-    background: "none",
     color: "black",
     border: 2,
     borderColor: "var(--color)",
@@ -109,7 +108,7 @@ const ManageAllProducts = () => {
                   sx={{
                     color: "white",
                     textAlign: "left",
-                    my: 1,
+                    mt: 1.5,
                     background: "var(--color)",
                     fontSize: "15px",
                     p: 0.5,
@@ -119,15 +118,19 @@ const ManageAllProducts = () => {
                   {order.status}
                 </Typography>
                 <Box>
+                  {order.status === "pending" && (
+                    <Button
+                      sx={buttonStyle}
+                      onClick={() => handleShipping(order._id)}
+                      style={{ marginRight: "15px" }}
+                      className="product-card-button"
+                    >
+                      Ship
+                    </Button>
+                  )}
                   <Button
                     sx={buttonStyle}
-                    onClick={() => handleShipping(order._id)}
-                  >
-                    Ship
-                  </Button>
-                  <Button
-                    sx={buttonStyle}
-                    style={{ marginLeft: "15px" }}
+                    className="product-card-button"
                     onClick={() => handleDeleteOrder(order._id)}
                   >
                     Delete

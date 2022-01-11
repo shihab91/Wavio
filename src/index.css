@@ -9,6 +9,9 @@ body {
   font-family: "Dosis", sans-serif !important;
   font-family: "Nunito", sans-serif !important;
 }
+::selection{
+  background: #ecf4ff;
+}
 :root {
   --nunito-font: "Nunito", sans-serif;
   --dosis-font: "Dosis", sans-serif;

@@ -51,7 +51,7 @@ const ManageProducts = () => {
                 mx: "auto",
                 borderRadius: "20px",
                 display: "flex",
-                flexDirection: "row"
+                flexDirection: "row",
               }}
               className="product-card"
             >
@@ -71,11 +71,15 @@ const ManageProducts = () => {
                   gutterBottom
                   variant="h5"
                   component="h5"
-
                 >
                   {product.name}
                 </Typography>
-                <Typography variant="h5" style={bannerFontStyle} component="p" sx={{ my: 2 }}>
+                <Typography
+                  variant="h5"
+                  style={bannerFontStyle}
+                  component="p"
+                  sx={{ my: 2 }}
+                >
                   $ {product.price}
                 </Typography>
                 <Rating
@@ -88,14 +92,13 @@ const ManageProducts = () => {
                   sx={{
                     display: "block",
                     mt: 2,
-                    background: "none",
                     color: "black",
                     border: 2,
-                    borderColor: "red",
-                    // borderRadius: ,
-                    fontSize: 16,
+                    borderColor: "var(--color)",
+                    borderRadius: 20,
+                    fontSize: 14,
                     px: 4,
-                    py: 0.7,
+                    py: 0.4,
                   }}
                   onClick={() => handleDeleteProduct(product._id)}
                 >

@@ -68,6 +68,7 @@ const PlaceOrder = () => {
               defaultValue={user.displayName}
               type="text"
               placeholder="Enter Your Name"
+              disabled
             />
             <label htmlFor="email"> Email Address* </label>
             <input
@@ -77,6 +78,7 @@ const PlaceOrder = () => {
               defaultValue={user.email}
               type="email"
               placeholder="Enter Your Email"
+              disabled
             />
             <label htmlFor="email"> Phone* </label>
             <input
