@@ -45,12 +45,12 @@ const ManageAllProducts = () => {
     background: "none",
     color: "black",
     border: 2,
-    borderColor: "red",
-    fontSize: 16,
-    px: 2,
-    py: 0.5,
-    textTransform: "none",
-  }
+    borderColor: "var(--color)",
+    borderRadius: 20,
+    fontSize: 14,
+    px: 4,
+    py: 0.4,
+  };
 
   return (
     <Container sx={{ my: 10 }}>

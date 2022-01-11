@@ -1,7 +1,7 @@
 .footerStyle {
   background: #120d48;
   color: #fff;
-  font-family: var(--nunito);
+  font-family: var(--nunito-font);
   padding: 50px 0;
   margin-top: 80px;
 }

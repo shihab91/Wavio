@@ -42,7 +42,7 @@ const ProductDetail = ({ id }) => {
             variant="h5"
             sx={{
               fontWeight: 600,
-              fontFamily: "var(--nunito)",
+              fontFamily: "var(--nunito-font)",
               mt: 2,
               color: "var(--blue-color)",
             }}
@@ -51,14 +51,18 @@ const ProductDetail = ({ id }) => {
           </Typography>
           <Typography
             variant="h5"
-            sx={{ fontFamily: "var(--nunito)", mt: 2, color: "var(--color)" }}
+            sx={{
+              fontFamily: "var(--nunito-font)",
+              mt: 2,
+              color: "var(--color)",
+            }}
           >
             {singleProduct.name}
           </Typography>
           <Typography
             variant="body1"
             sx={{
-              fontFamily: "var(--nunito )",
+              fontFamily: "var(--nunito-font )",
               width: { sm: "80%", md: "70%" },
               textAlign: "justify",
               background: "#edf9ff",

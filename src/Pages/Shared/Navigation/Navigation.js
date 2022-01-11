@@ -7,7 +7,7 @@ import "./Navigation.css";
 import useAuth from "../../../hooks/useAuth";
 const Navigation = () => {
   const buttonStyle = {
-    fontFamily: "var(--nunito)",
+    fontFamily: "var(--nunito-font)",
     margin: "0 20px 0 20px",
     fontSize: "1rem",
     color: "black",

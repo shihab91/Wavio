@@ -40,11 +40,11 @@ function Dashboard(props) {
   };
   const dashboardLink = {
     textAlign: "left",
-    position: "10px 5px",
+    padding: "auto",
   };
   const dashboardButton = {
     fontSize: "15px",
-    color: "var(--color)",
+    color: "#000",
     fontWeight: "bold",
     margin: "8px 0",
   };
@@ -97,7 +97,6 @@ function Dashboard(props) {
             </Button>
           </NavLink>
           <Button
-            color="inherit"
             style={dashboardButton}
             onClick={() => {
               signOutUser(history);
@@ -178,7 +177,12 @@ function Dashboard(props) {
             variant="h6"
             noWrap
             component="div"
-            sx={{ color: "var(--blue-color)", py: 3 }}
+            sx={{
+              color: "var(--blue-color)",
+              py: 3,
+              fontSize: 25,
+              fontFamily: "var(--nunito-font)",
+            }}
           >
             Wavio Dashboard
           </Typography>

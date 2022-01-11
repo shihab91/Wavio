@@ -10,7 +10,7 @@ body {
   font-family: "Nunito", sans-serif !important;
 }
 :root {
-  --nunito: "Nunito", sans-serif;
+  --nunito-font: "Nunito", sans-serif;
   --dosis-font: "Dosis", sans-serif;
   --color: rgb(55, 158, 255);
   --button-bg: linear-gradient(

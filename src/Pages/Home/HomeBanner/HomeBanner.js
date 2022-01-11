@@ -1,5 +1,6 @@
 import { Container, Grid, Typography, Box, Button } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HomeBanner = () => {
   const bannerFontStyle = {
@@ -38,7 +39,11 @@ const HomeBanner = () => {
             </Typography>
           </Box>
           <Typography
-            sx={{ fontFamily: "var(--nunito-font)", textAlign: "left", mt: 2 }}
+            sx={{
+              fontFamily: "var(--nunito-font-font)",
+              textAlign: "left",
+              mt: 2,
+            }}
             variant="h6"
             gutterBottom
           >
@@ -69,7 +74,10 @@ const HomeBanner = () => {
                 fontFamily: "",
               }}
             >
-              Order Now
+              <Link to="/explore" style={{ color: "#fff" }}>
+                Order Now
+              </Link>
+              e
             </Button>
             <Button
               variant="contained"

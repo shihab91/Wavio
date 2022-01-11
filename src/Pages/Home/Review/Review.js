@@ -67,7 +67,7 @@ const Review = () => {
               <Grid item xs={12} lg={8} sx={{ textAlign: "left" }}>
                 <Typography
                   variant="h4"
-                  sx={{ fontFamily: "var(--nunito )", fontWeight: 600 }}
+                  sx={{ fontFamily: "var(--nunito-font )", fontWeight: 600 }}
                 >
                   {review.name}
                 </Typography>
@@ -75,7 +75,7 @@ const Review = () => {
                   variant="h5"
                   sx={{
                     color: "var(--color)",
-                    fontFamily: "var(--nunito )",
+                    fontFamily: "var(--nunito-font )",
                     mt: 3,
                     mb: 1,
                     fontWeight: 600,
@@ -92,7 +92,7 @@ const Review = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    fontFamily: "var(--nunito )",
+                    fontFamily: "var(--nunito-font )",
                     width: { xs: "90%", md: "70%" },
                     textAlign: "justify",
                     background: "#edf9ff",
