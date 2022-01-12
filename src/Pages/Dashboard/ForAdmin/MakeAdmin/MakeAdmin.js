@@ -29,7 +29,9 @@ const MakeAdmin = () => {
           placeholder="Email"
           style={{ maxWidth: "350px" }}
         />
-        <Button type="submit">Make Admin</Button>
+        <Button type="submit" className="button">
+          Make Admin
+        </Button>
       </form>
     </Container>
   );

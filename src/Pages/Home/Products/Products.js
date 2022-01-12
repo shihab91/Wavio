@@ -34,6 +34,7 @@ const Products = () => {
                 fontWeight: 600,
               }}
               onClick={() => history.push("/explore")}
+              className="button"
             >
               {" "}
               View More <ArrowForwardIcon />{" "}

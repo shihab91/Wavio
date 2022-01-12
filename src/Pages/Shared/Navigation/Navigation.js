@@ -109,6 +109,7 @@ const Navigation = () => {
                     style={buttonStyle}
                     variant="contained"
                     sx={{ backgroundImage: "var(--button-bg)" }}
+                    className="button"
                   >
                     Login
                   </Button>

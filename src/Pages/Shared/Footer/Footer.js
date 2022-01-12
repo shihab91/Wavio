@@ -106,6 +106,7 @@ const Footer = () => {
               <Button
                 variant="contained"
                 sx={{ background: "var(--button-bg)" }}
+                className="button"
               >
                 Subscribe
               </Button>

@@ -8,8 +8,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Dosis", sans-serif !important;
   font-family: "Nunito", sans-serif !important;
+  scroll-behavior: smooth;
 }
-::selection{
+::selection {
   background: #ecf4ff;
 }
 :root {
@@ -25,8 +26,13 @@ body {
   --blue-color: #1e65ff;
   --dashboard-bg: rgb(245, 251, 254);
 }
-button {
+/* globals styles */
+.button {
   font-family: "Nunito", sans-serif !important;
+  box-shadow:0 20px 30px 0 rgb(41 112 250 / 20%) !important;
+}
+.button:hover{
+  box-shadow: 0 20px 30px 0 rgb(41 112 250 / 45%) !important;
 }
 .rating {
   color: var(--color);
@@ -34,13 +40,28 @@ button {
 .product-card {
   box-shadow: var(--box-shadow) !important;
 }
-.review-card {
+.review-slider {
   box-shadow: var(--box-shadow) !important;
+  border-radius: 15px;
+  height: 440px;
+  width: 1000px !important;
+  margin: 0 auto;
+}
+.review-card {
+  box-shadow: none !important;
+  border: none !important;
 }
 .productDetail-card {
   box-shadow: var(--box-shadow) !important;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* disable the arrow keys in the input field */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

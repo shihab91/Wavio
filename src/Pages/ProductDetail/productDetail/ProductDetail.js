@@ -15,7 +15,7 @@ const ProductDetail = ({ id }) => {
       <Grid
         container
         spacing={4}
-        sx={{ width: "90%", mx: "auto", borderRadius: 3, py: 4, px: 4 }}
+        sx={{ width: "90%", mx: "auto", borderRadius: 3, py: 8, px: 4 }}
         className="productDetail-card"
       >
         <Grid item xs={12} sm={10} sx={{ mx: { sm: "auto" } }} md={5}>
@@ -28,10 +28,21 @@ const ProductDetail = ({ id }) => {
         <Grid item xs={12} md={7} sx={{ textAlign: "left" }}>
           <img
             src="https://wavio.b-cdn.net/wp-content/uploads/2020/12/Wave.png"
-            style={{ width: "200px", height: "10px", marginBottom: "20px" }}
+            style={{ width: "200px", height: "10px" }}
             alt=""
           />{" "}
           <br />
+          <Typography
+            variant="h5"
+            sx={{
+              fontFamily: "var(--nunito-font)",
+              mt: 1,
+              mb: 2,
+              color: "var(--color)",
+            }}
+          >
+            {singleProduct.name}
+          </Typography>
           <Rating
             initialRating={singleProduct.rating}
             readonly
@@ -48,16 +59,6 @@ const ProductDetail = ({ id }) => {
             }}
           >
             Price : {singleProduct.price}
-          </Typography>
-          <Typography
-            variant="h5"
-            sx={{
-              fontFamily: "var(--nunito-font)",
-              mt: 2,
-              color: "var(--color)",
-            }}
-          >
-            {singleProduct.name}
           </Typography>
           <Typography
             variant="body1"

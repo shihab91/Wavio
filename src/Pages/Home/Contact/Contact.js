@@ -9,7 +9,7 @@ const Contact = () => {
   };
 
   return (
-    <Container>
+    <Container sx={{ mb: 20 }}>
       <Typography variant="h3" style={contactStyle}>
         CONTACT <span style={{ color: "var(--color)" }}>INFORMATION</span>
       </Typography>
@@ -44,6 +44,7 @@ const Contact = () => {
               fontSize: "17px",
               fontWeight: 600,
             }}
+            className="button"
           >
             Submit
           </Button>

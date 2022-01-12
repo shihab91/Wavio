@@ -77,6 +77,7 @@ const Review = () => {
               fontWeight: 600,
             }}
             type="submit"
+            className="button"
           >
             Submit
           </Button>

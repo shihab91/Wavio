@@ -18,7 +18,7 @@ const AllProducts = ({ products, sliceNumber }) => {
   };
   return (
     <>
-      <Box sx={{ mb: 4, pt: 10 }}>
+      <Box sx={{ mb: 4, py: 5 }}>
         <Typography
           variant="h2"
           gutterBottom
@@ -55,8 +55,8 @@ const AllProducts = ({ products, sliceNumber }) => {
                 style={{
                   padding: "15px",
                   objectFit: "contain",
-                  width: "200px",
-                  height: "300px",
+                  width: "180px",
+                  height: "240px",
                 }}
                 alt=""
               />
@@ -95,11 +95,13 @@ const AllProducts = ({ products, sliceNumber }) => {
                     border: 2,
                     borderColor: "var(--color)",
                     borderRadius: 20,
-                    fontSize: 16,
+                    fontSize: 18,
                     px: 4,
                     py: 0.7,
+                    textTransform: "none",
+                    mb: 2,
                   }}
-                  className="product-card-button"
+                  className="product-card-button button"
                   onClick={() => {
                     history.push(`/explore/${product._id}`);
                   }}

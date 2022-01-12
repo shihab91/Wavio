@@ -101,6 +101,7 @@ const ManageProducts = () => {
                     py: 0.4,
                   }}
                   onClick={() => handleDeleteProduct(product._id)}
+                  className="button"
                 >
                   delete
                 </Button>

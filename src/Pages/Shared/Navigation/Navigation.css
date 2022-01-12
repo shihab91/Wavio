@@ -1,4 +1,7 @@
 @media (max-width: 900px) {
+  .nav-links{
+    z-index: 20;
+  }
   .nav-links.active {
     display: block;
   }

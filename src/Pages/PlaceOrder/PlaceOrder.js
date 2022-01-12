@@ -22,7 +22,13 @@ const PlaceOrder = () => {
       });
   }, [id]);
   const onSubmit = (data) => {
-    let newData = { ...data, ...orderedProduct, status: "pending" };
+    let newData = {
+      ...data,
+      ...orderedProduct,
+      userName: user.displayName,
+      userEmail: user.email,
+      status: "pending",
+    };
     fetch("https://dry-springs-50521.herokuapp.com/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

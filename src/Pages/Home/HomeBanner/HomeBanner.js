@@ -73,6 +73,7 @@ const HomeBanner = () => {
                 fontWeight: 600,
                 fontFamily: "",
               }}
+              className="button"
             >
               <Link to="/explore" style={{ color: "#fff" }}>
                 Order Now
@@ -91,6 +92,7 @@ const HomeBanner = () => {
                 fontWeight: 600,
                 ml: { xs: 0, sm: 5 },
               }}
+              className="button"
             >
               Read More
             </Button>

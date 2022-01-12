@@ -123,14 +123,14 @@ const ManageAllProducts = () => {
                       sx={buttonStyle}
                       onClick={() => handleShipping(order._id)}
                       style={{ marginRight: "15px" }}
-                      className="product-card-button"
+                      className="product-card-button button"
                     >
                       Ship
                     </Button>
                   )}
                   <Button
                     sx={buttonStyle}
-                    className="product-card-button"
+                    className="product-card-button button"
                     onClick={() => handleDeleteOrder(order._id)}
                   >
                     Delete

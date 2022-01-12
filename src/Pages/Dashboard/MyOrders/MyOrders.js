@@ -32,7 +32,6 @@ const MyOrders = () => {
     }
   };
   return (
-
     <Container sx={{ my: 10 }}>
       <Typography
         variant="h3"
@@ -99,15 +98,31 @@ const MyOrders = () => {
                   {order.status}
                 </Typography>
                 <Button
-                  variant="contained"
+                  variant="contained "
                   sx={{
-                    background: "red",
-                    borderRadius: "10px",
-                    p: "5px 20px",
-                    fontSize: "17px",
-                    fontWeight: 600,
-                    color: "white",
+                    // background: "red",
+                    // borderRadius: "10px",
+                    // p: "5px 20px",
+                    // fontSize: "17px",
+                    // fontWeight: 600,
+                    // color: "white",
+                    // backgroundImage: "var(--button-bg)",
+                    // borderRadius: "30px",
+                    // p: "10px 35px",
+                    // mt: 3,
+                    // fontSize: "17px",
+                    // fontWeight: 600,
+                    // fontFamily: "",
+                    mt: 2,
+                    color: "black",
+                    border: 2,
+                    borderColor: "var(--color)",
+                    borderRadius: 20,
+                    fontSize: 14,
+                    px: 4,
+                    py: 0.4,
                   }}
+                  className="product-card-button button"
                   onClick={() => handleDeleteOrder(order._id)}
                 >
                   Cancel
@@ -117,7 +132,7 @@ const MyOrders = () => {
           </Grid>
         ))}
       </Grid>
-    </Container >
+    </Container>
   );
 };
 
