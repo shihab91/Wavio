@@ -13,8 +13,8 @@ const Navigation = () => {
     color: "black",
     textTransform: "none",
   };
-  const [isActive, setIsActive] = useState(false);
   const { user, signOutUser } = useAuth();
+  const [isActive, setIsActive] = useState(false);
   const handleToggleBtn = () => {
     setIsActive(!isActive);
   };
@@ -55,9 +55,9 @@ const Navigation = () => {
             onClick={handleToggleBtn}
           >
             {isActive ? (
-              <CloseIcon style={toggleBtn} />
+              <CloseIcon style={toggleBtn} className="toggle-button" />
             ) : (
-              <MenuIcon style={toggleBtn} />
+              <MenuIcon style={toggleBtn} className="toggle-button" />
             )}
           </Box>
           <Box

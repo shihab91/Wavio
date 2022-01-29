@@ -43,8 +43,7 @@ body {
 .review-slider {
   box-shadow: var(--box-shadow) !important;
   border-radius: 15px;
-  height: 440px;
-  width: 1000px !important;
+  width: 90%;
   margin: 0 auto;
 }
 .review-card {

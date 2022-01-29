@@ -23,11 +23,8 @@ textarea {
   border: 1px solid #ccc;
 }
 .form input:focus,
-textarea:focus {
-  border: 1px solid var(--color);
-  outline: none;
-}
-.form input:hover,
+textarea:focus, input:hover,
 textarea:hover {
   border: 1px solid var(--color);
+  outline: none;
 }

@@ -12,7 +12,7 @@ const HomeBanner = () => {
     backgroundColor: "white",
   };
   return (
-    <Container sx={{ py: 10 }}>
+    <Container sx={{ py: { xs: 20, md: 11 } }}>
       <Grid container spacing={4}>
         <Grid
           item

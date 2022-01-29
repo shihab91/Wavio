@@ -10,16 +10,21 @@ const Contact = () => {
 
   return (
     <Container sx={{ mb: 20 }}>
-      <Typography variant="h3" style={contactStyle}>
+      <Typography variant="h3" style={contactStyle} sx={{ mt: 25, mb: 6 }}>
         CONTACT <span style={{ color: "var(--color)" }}>INFORMATION</span>
       </Typography>
       <Box
-        sx={{ width: { xs: "90%", sm: "80%", md: "80%" }, mx: "auto", my: 4 }}
+        sx={{
+          width: { xs: "90%", sm: "85%", md: "80%" },
+          mx: "auto",
+          my: 4,
+          borderRadius: 1,
+        }}
         className="contact-form"
       >
         <Typography
           variant="h5"
-          sx={{ textAlign: "center", pt: 4 }}
+          sx={{ textAlign: "center", pt: 8 }}
           style={contactStyle}
         >
           Send us a message
@@ -41,6 +46,7 @@ const Contact = () => {
               borderRadius: "25px",
               p: "8px 40px",
               mt: 3,
+              mb: 5,
               fontSize: "17px",
               fontWeight: 600,
             }}
