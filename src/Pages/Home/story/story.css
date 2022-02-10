@@ -1,0 +1,35 @@
+.story-description-container img {
+  height: 10px;
+  margin: 10px auto 15px auto;
+}
+.story-description-container p {
+  font-family: var(--nunito-font);
+  font-size: 20px;
+  max-width: 540px;
+  color: #081f46 !important;
+  width: 90%;
+  margin: 10px auto 30px auto;
+}
+.story-card {
+  width: 196px;
+  height: 196px;
+  border-radius: 50% !important;
+  box-shadow: var(--box-shadow) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.story-card img {
+  width: 78px;
+}
+
+.story-title{
+    color: #081F46;
+    font-family: var(--dosis-font);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: 2px;
+}

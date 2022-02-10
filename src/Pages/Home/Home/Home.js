@@ -5,6 +5,7 @@ import Contact from '../Contact/Contact';
 import HomeBanner from '../HomeBanner/HomeBanner';
 import Products from '../Products/Products';
 import Review from '../Review/Review';
+import Story from "../story/Story";
 const containerStyle = {
   backgroundColor: "rgb(237, 249, 255)",
   backgroundImage: `url("https://i.ibb.co/f4Ryhq6/homeBg.png")`,
@@ -15,13 +16,14 @@ const Home = () => {
   return (
     <>
       <div style={containerStyle}>
-        <Navigation></Navigation>
-        <HomeBanner></HomeBanner>
+        <Navigation />
+        <HomeBanner />
       </div>
-      <Products></Products>
-      <Review></Review>
-      <Contact></Contact>
-      <Footer></Footer>
+      <Products />
+      <Review />
+      <Story />
+      <Contact />
+      <Footer />
     </>
   );
 };

@@ -3,7 +3,7 @@
   color: #fff;
   font-family: var(--nunito-font);
   padding: 50px 0;
-  margin-top: 80px;
+  margin-top: -10px;
 }
 .footer-links {
   margin: 12px 0;
@@ -30,4 +30,8 @@
 }
 .subscribe:focus {
   outline: var(--color);
+}
+.footer-bg-wave{
+  fill:#120d48;
+  background-color: white;
 }

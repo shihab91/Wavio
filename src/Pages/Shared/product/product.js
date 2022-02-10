@@ -22,10 +22,10 @@ const AllProducts = ({ products, sliceNumber }) => {
         <Typography
           variant="h2"
           gutterBottom
-          style={bannerFontStyle}
-          sx={{ color: "var(--color)" }}
+          sx={{ fontFamily: "var(--nunito-font)", fontWeight: 700 }}
         >
-          CHOOSE YOUR WATER BOTTLE
+          CHOOSE YOUR{" "}
+          <span style={{ color: "var(--color)" }}>WATER BOTTLE</span>
         </Typography>
         <Typography
           variant="body1"

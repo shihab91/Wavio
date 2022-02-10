@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
 import Slider from "react-slick";
-
+import "./review.css";
 const Review = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
@@ -13,11 +13,11 @@ const Review = () => {
   }, []);
   const settings = {
     dots: false,
-    infinite: true,
+    // infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     arrows: false,
   };
   return (
@@ -53,7 +53,6 @@ const Review = () => {
             key={review._id}
             sx={{
               maxWidth: "100%",
-              // mx: "auto",
               mt: 5,
               background:
                 "url(https://wavio.b-cdn.net/wp-content/uploads/2020/12/Quotemarks-right-6.png) no-repeat",
@@ -70,14 +69,8 @@ const Review = () => {
               <Grid item xs={12} lg={5}>
                 <img
                   src={review.image}
-                  width="240px"
-                  height="240px"
-                  style={{
-                    borderRadius: "50%",
-                    marginTop: "20px",
-                    marginLeft: "50px",
-                  }}
                   alt="reviewer img"
+                  className="review-img"
                 />
               </Grid>
               <Grid item xs={12} lg={7} sx={{ textAlign: "left" }}>

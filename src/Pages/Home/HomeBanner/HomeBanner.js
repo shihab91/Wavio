@@ -78,7 +78,6 @@ const HomeBanner = () => {
               <Link to="/explore" style={{ color: "#fff" }}>
                 Order Now
               </Link>
-              e
             </Button>
             <Button
               variant="contained"
