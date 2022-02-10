@@ -31,7 +31,11 @@ C1392.2,33.7,1340.3,61,1285.4,81.2z"
       </svg>
       <Box className="footerStyle">
         <Container>
-          <Grid container spacing={4}>
+          <Grid
+            container
+            spacing={4}
+            sx={{ borderBottom: "1px solid #ffffff1a", pb: 5 }}
+          >
             <Grid item xs={12} sm={6} md={4}>
               <List>
                 <Typography variant="h6" sx={{ textAlign: "left", ml: 2 }}>
@@ -123,6 +127,23 @@ C1392.2,33.7,1340.3,61,1285.4,81.2z"
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <Box>
+                <Typography
+                  variant="h6"
+                  sx={{ textAlign: "left", ml: 2, mt: 3 }}
+                >
+                  {" "}
+                  <Box
+                    sx={{
+                      color: "var(--color)",
+                      display: "inline-block",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {" "}
+                    |{" "}
+                  </Box>{" "}
+                  Subscribe to our Newsletter
+                </Typography>
                 <input
                   type="text"
                   className="subscribe"
@@ -138,6 +159,9 @@ C1392.2,33.7,1340.3,61,1285.4,81.2z"
               </Box>
             </Grid>
           </Grid>
+          <p className="copyright-text">
+            Copyright ©2022 Wavio. All rights reserved.
+          </p>
         </Container>
       </Box>
     </>
