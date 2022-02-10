@@ -53,6 +53,12 @@ body {
 .productDetail-card {
   box-shadow: var(--box-shadow) !important;
 }
+.bar {
+  color: var(--color);
+  font-size: 23px;
+  font-weight: 900;
+  margin: 0 10px 0 20px;
+}
 /* disable the arrow keys in the input field */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

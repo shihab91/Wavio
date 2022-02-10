@@ -71,7 +71,6 @@ const HomeBanner = () => {
                 mt: 3,
                 fontSize: "17px",
                 fontWeight: 600,
-                fontFamily: "",
               }}
               className="button"
             >

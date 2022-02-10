@@ -39,17 +39,7 @@ C1392.2,33.7,1340.3,61,1285.4,81.2z"
             <Grid item xs={12} sm={6} md={4}>
               <List>
                 <Typography variant="h6" sx={{ textAlign: "left", ml: 2 }}>
-                  {" "}
-                  <Box
-                    sx={{
-                      color: "var(--color)",
-                      display: "inline-block",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    {" "}
-                    |{" "}
-                  </Box>{" "}
+                  <span className="bar">|</span>
                   Menu
                 </Typography>
                 <ListItem className="footer-links"> Home</ListItem>
@@ -71,17 +61,7 @@ C1392.2,33.7,1340.3,61,1285.4,81.2z"
               }}
             >
               <Typography variant="h6" sx={{ textAlign: "left", ml: 2 }}>
-                {" "}
-                <Box
-                  sx={{
-                    color: "var(--color)",
-                    display: "inline-block",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {" "}
-                  |{" "}
-                </Box>{" "}
+                <span className="bar">|</span>
                 Contact Us
               </Typography>
               <Typography
@@ -94,17 +74,7 @@ C1392.2,33.7,1340.3,61,1285.4,81.2z"
                 Call Us: 212.262.3200
               </Typography>
               <Typography variant="h6" sx={{ textAlign: "left", ml: 2, mt: 3 }}>
-                {" "}
-                <Box
-                  sx={{
-                    color: "var(--color)",
-                    display: "inline-block",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {" "}
-                  |{" "}
-                </Box>{" "}
+                <span className="bar">|</span>
                 Social Media Links
               </Typography>
               <Box sx={{ ml: 2, mt: 3 }}>
@@ -132,16 +102,7 @@ C1392.2,33.7,1340.3,61,1285.4,81.2z"
                   sx={{ textAlign: "left", ml: 2, mt: 3 }}
                 >
                   {" "}
-                  <Box
-                    sx={{
-                      color: "var(--color)",
-                      display: "inline-block",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    {" "}
-                    |{" "}
-                  </Box>{" "}
+                  <span className="bar">|</span>
                   Subscribe to our Newsletter
                 </Typography>
                 <input

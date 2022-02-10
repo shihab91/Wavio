@@ -1,15 +1,41 @@
+.container{
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+}
 .delivery-service-wrapper{
+    padding: 100px 50px;
     box-shadow: var(--box-shadow);
     border-radius: 10px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     text-align: left;
 }
 .image img{
-    max-width: 530px;
-    padding: 10%;
+    max-width: 480px;
     width: 100%;
 }
 .image,.texts{
     flex: 50%;
+}
+.delivery-service-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.delivery-service-item .title{
+font-size: 20px;
+font-weight: 700;
+}
+
+@media only screen and (max-width:992px) {
+    .delivery-service-wrapper{
+        flex-direction: column;
+    }
+    .texts h3{
+        font-size: 27px;
+    }
+
 }
