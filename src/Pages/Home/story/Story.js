@@ -42,7 +42,7 @@ const Story = () => {
           <span style={{ color: "var(--color)" }}>OUR</span> STORY
         </Typography>
         <img src="https://i.ibb.co/hLsCxZK/Wave.png" alt="" />
-        <p>
+        <p className="description">
           Our company was founded in 2008. Water Brand bottle is great for
           drinking, cooking, activities, and even for children. The product is
           certified in 50 countries.

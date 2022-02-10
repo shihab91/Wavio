@@ -1,0 +1,15 @@
+.delivery-service-wrapper{
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.image img{
+    max-width: 530px;
+    padding: 10%;
+    width: 100%;
+}
+.image,.texts{
+    flex: 50%;
+}
