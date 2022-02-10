@@ -12,7 +12,9 @@ const HomeBanner = () => {
     backgroundColor: "white",
   };
   return (
-    <Container sx={{ py: { xs: 20, md: 11 } }}>
+    <Container
+      sx={{ py: { xs: 5, md: 11 }, height: "100vh", verticalAlign: "center" }}
+    >
       <Grid container spacing={4}>
         <Grid
           item
@@ -61,7 +63,14 @@ const HomeBanner = () => {
             water please come to us and give us an order and take safe and sound
             water for you.
           </Typography>
-          <Box>
+          <Box
+            sx={{
+              display: "flex",
+              gap: 4,
+              flexDirection: { xs: "column", sm: "row" },
+              mt: { xs: 4, sm: 0 },
+            }}
+          >
             <Button
               variant="contained"
               sx={{
@@ -85,10 +94,9 @@ const HomeBanner = () => {
                 color: "var(--color)",
                 borderRadius: "30px",
                 p: "10px 35px",
-                mt: 3,
+                mt: { xs: 0, sm: 3 },
                 fontSize: "17px",
                 fontWeight: 600,
-                ml: { xs: 0, sm: 5 },
               }}
               className="button"
             >

@@ -91,7 +91,7 @@ const PlaceOrder = () => {
               className="login-input"
               required
               {...register("Phone")}
-              type="text"
+              type="number"
               placeholder="Enter Your phone Number"
             />
             <label htmlFor="email"> Address* </label>

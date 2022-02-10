@@ -19,7 +19,7 @@ const DeliveryService = () => {
             gutterBottom
             sx={{ fontFamily: "var(--nunito-font)", fontWeight: 700 }}
           >
-            <span style={{ color: "var(--color)" }}>DELIVERY</span>SERVICE
+            <span style={{ color: "var(--color)" }}>DELIVERY </span>SERVICE
           </Typography>
           <p
             className="description"

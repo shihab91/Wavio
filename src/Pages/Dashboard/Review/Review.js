@@ -2,10 +2,8 @@ import { Button, Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { useForm } from "react-hook-form";
-// import useAuth from "../../../hooks/useAuth";
 
 const Review = () => {
-  // const { user } = useAuth();
   const { register, handleSubmit, reset } = useForm();
   const reviewStyle = {
     fontFamily: "var(--dosis-font)",

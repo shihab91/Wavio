@@ -8,25 +8,30 @@ const ManageAllProducts = () => {
   const [isDeleted, setIsDeleted] = useState(false);
   useEffect(() => {
     fetch("https://dry-springs-50521.herokuapp.com/orders")
-      .then(res => res.json())
-      .then(data => setAllOrders(data))
+      .then((res) => res.json())
+      .then((data) => {
+        setAllOrders(data);
+        console.log(data);
+      });
   }, [isShipped, isDeleted]);
   const handleShipping = (id) => {
     fetch(`https://dry-springs-50521.herokuapp.com/orders?id=${id}`, {
-      method: 'PUT',
-      headers: { "content-type": "application/json" }
+      method: "PUT",
+      headers: { "content-type": "application/json" },
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.modifiedCount) {
-          alert("status changed successfully")
-          setIsShipped(!isShipped)
+          alert("status changed successfully");
+          setIsShipped(!isShipped);
         }
-      })
-  }
+      });
+  };
   const handleDeleteOrder = (id) => {
     // eslint-disable-next-line no-restricted-globals
-    const confirmation = confirm("Are you sure you want to delete this users order?");
+    const confirmation = confirm(
+      "Are you sure you want to delete this users order?"
+    );
     if (confirmation) {
       fetch(`https://dry-springs-50521.herokuapp.com/orders/${id}`, {
         method: "DELETE",
@@ -35,7 +40,7 @@ const ManageAllProducts = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount) {
-            setIsDeleted(!isDeleted)
+            setIsDeleted(!isDeleted);
           }
         });
     }
@@ -109,7 +114,8 @@ const ManageAllProducts = () => {
                     color: "white",
                     textAlign: "left",
                     mt: 1.5,
-                    background: "var(--color)",
+                    background:
+                      order.status === "shipped" ? "var(--color)" : "#7158e2",
                     fontSize: "15px",
                     p: 0.5,
                     borderRadius: "3px",

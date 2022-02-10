@@ -2,3 +2,6 @@
   text-transform: none !important;
   font-size: 18px !important;
 }
+a.active button{
+  color:var(--color) !important;
+}

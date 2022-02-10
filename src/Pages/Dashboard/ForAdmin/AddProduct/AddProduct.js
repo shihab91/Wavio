@@ -47,7 +47,7 @@ const AddProduct = () => {
             {...register("name")}
           />
           <input
-            type="text"
+            type="number"
             placeholder="Enter Product Price*"
             {...register("price")}
           />

@@ -5,6 +5,7 @@ import {
   Container,
   Grid,
   Typography,
+  Box,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import useAuth from "../../../hooks/useAuth";
@@ -44,19 +45,19 @@ const MyOrders = () => {
       >
         My Orders
       </Typography>
-      <Grid container spacing={3} sx={{ boxShadow: "var(--box-shadow)" }}>
+      <Grid container spacing={3}>
         {myOrders.map((order) => (
           <Grid key={order._id} item xs={12} lg={6} sx={{ pr: 3, pb: 3 }}>
             <Card
               sx={{
                 maxWidth: "auto",
                 display: "flex",
-                flexDirection: "row",
                 alignItems: "center",
                 px: 3,
-                py: 5,
+                py: { xs: 2, md: 5 },
                 boxShadow: "var(--box-shadow)",
                 borderRadius: 3,
+                overflowY: "scroll",
               }}
             >
               <img
@@ -89,7 +90,8 @@ const MyOrders = () => {
                     color: "white",
                     textAlign: "left",
                     my: 1,
-                    background: "var(--color)",
+                    background:
+                      order.status === "shipped" ? "var(--color)" : "#7158e2",
                     fontSize: "15px",
                     p: 0.5,
                     borderRadius: "3px",
@@ -97,36 +99,48 @@ const MyOrders = () => {
                 >
                   {order.status}
                 </Typography>
-                <Button
-                  variant="contained "
+                <Box
                   sx={{
-                    // background: "red",
-                    // borderRadius: "10px",
-                    // p: "5px 20px",
-                    // fontSize: "17px",
-                    // fontWeight: 600,
-                    // color: "white",
-                    // backgroundImage: "var(--button-bg)",
-                    // borderRadius: "30px",
-                    // p: "10px 35px",
-                    // mt: 3,
-                    // fontSize: "17px",
-                    // fontWeight: 600,
-                    // fontFamily: "",
-                    mt: 2,
-                    color: "black",
-                    border: 2,
-                    borderColor: "var(--color)",
-                    borderRadius: 20,
-                    fontSize: 14,
-                    px: 4,
-                    py: 0.4,
+                    display: "flex",
+                    gap: 2,
+                    flexDirection: { xs: "column", md: "row" },
                   }}
-                  className="product-card-button button"
-                  onClick={() => handleDeleteOrder(order._id)}
                 >
-                  Cancel
-                </Button>
+                  <Button
+                    variant="contained "
+                    sx={{
+                      mt: 2,
+                      color: "black",
+                      border: 2,
+                      borderColor: "var(--color)",
+                      borderRadius: 20,
+                      fontSize: 14,
+                      px: 4,
+                      py: 0.4,
+                    }}
+                    className="product-card-button button"
+                    onClick={() => handleDeleteOrder(order._id)}
+                  >
+                    Cancel
+                  </Button>
+                  <Button
+                    variant="contained "
+                    sx={{
+                      mt: 2,
+                      color: "black",
+                      border: 2,
+                      borderColor: "var(--color)",
+                      borderRadius: 20,
+                      fontSize: 14,
+                      px: 4,
+                      py: 0.4,
+                    }}
+                    className="product-card-button button"
+                    // onClick={() => handleDeleteOrder(order._id)}
+                  >
+                    Pay
+                  </Button>
+                </Box>
               </CardMedia>
             </Card>
           </Grid>
