@@ -8,11 +8,13 @@ import {
   Box,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const MyOrders = () => {
   const [myOrders, setMyOrders] = useState([]);
   const { user } = useAuth();
+  const history = useHistory();
   useEffect(() => {
     fetch(`https://dry-springs-50521.herokuapp.com/orders/${user?.email}`)
       .then((res) => res.json())
@@ -136,9 +138,11 @@ const MyOrders = () => {
                       py: 0.4,
                     }}
                     className="product-card-button button"
-                    // onClick={() => handleDeleteOrder(order._id)}
+                    onClick={() =>
+                      history.push(`/dashboard/payment/${order._id}`)
+                    }
                   >
-                    Pay
+                    {order.isPaid ? "Paid" : "Pay"}
                   </Button>
                 </Box>
               </CardMedia>

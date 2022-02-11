@@ -12,9 +12,7 @@ const HomeBanner = () => {
     backgroundColor: "white",
   };
   return (
-    <Container
-      sx={{ py: { xs: 5, md: 11 }, height: "100vh", verticalAlign: "center" }}
-    >
+    <Container sx={{ py: { md: 9 } }}>
       <Grid container spacing={4}>
         <Grid
           item
@@ -88,7 +86,6 @@ const HomeBanner = () => {
               </Link>
             </Button>
             <Button
-              variant="contained"
               style={readMore}
               sx={{
                 color: "var(--color)",

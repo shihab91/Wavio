@@ -1,7 +1,8 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Navigation from '../../Shared/Navigation/Navigation';
-import Contact from '../Contact/Contact';
+import SmoothScrollBar from "../../Shared/smoothScrollBar/SmoothScrollBar";
+import Contact from "../Contact/Contact";
 import DeliveryService from "../deliveryService/DeliveryService";
 import HomeBanner from "../HomeBanner/HomeBanner";
 import Products from "../Products/Products";
@@ -16,16 +17,18 @@ const containerStyle = {
 const Home = () => {
   return (
     <>
-      <div style={containerStyle}>
-        <Navigation />
-        <HomeBanner />
-      </div>
-      <Products />
-      <DeliveryService />
-      <Review />
-      <Story />
-      <Contact />
-      <Footer />
+      <SmoothScrollBar>
+        <div style={containerStyle}>
+          <Navigation />
+          <HomeBanner />
+        </div>
+        <Products />
+        <DeliveryService />
+        <Review />
+        <Story />
+        <Contact />
+        <Footer />
+      </SmoothScrollBar>
     </>
   );
 };

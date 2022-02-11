@@ -127,11 +127,11 @@ function Dashboard(props) {
               My Orders
             </Button>
           </NavLink>
-          <NavLink style={dashboardLink} to={`${url}/pay`}>
+          {/* <NavLink style={dashboardLink} to={`${url}/pay`}>
             <Button color="inherit" style={dashboardButton}>
               Pay
             </Button>
-          </NavLink>
+          </NavLink> */}
           <NavLink style={dashboardLink} to={`${url}/review`}>
             <Button color="inherit" style={dashboardButton}>
               Review
@@ -253,7 +253,7 @@ function Dashboard(props) {
           <Route path={`${path}/myOrders`}>
             <MyOrders />
           </Route>
-          <Route path={`${path}/pay`}>
+          <Route path={`${path}/payment/:appointmentId`}>
             <Pay />
           </Route>
           <Route path={`${path}/review`}>

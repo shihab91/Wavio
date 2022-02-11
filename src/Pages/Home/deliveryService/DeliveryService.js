@@ -61,7 +61,6 @@ const DeliveryService = () => {
               </Link>
             </Button>
             <Button
-              variant="contained"
               sx={{
                 color: "var(--color)",
                 background: "#fff",

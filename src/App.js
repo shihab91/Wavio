@@ -13,6 +13,7 @@ import NotFound from "./Pages/Shared/NotFound/NotFound";
 import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import MessengerCustomerChat from "react-messenger-customer-chat";
+import SmoothScrollBar from "./Pages/Shared/smoothScrollBar/SmoothScrollBar";
 
 function App() {
   return (
@@ -41,9 +42,11 @@ function App() {
             <PrivateRoute path="/placeorder/:id">
               <PlaceOrder />
             </PrivateRoute>
-            <PrivateRoute path="/explore/:id">
-              <ProductDetailPage />
-            </PrivateRoute>
+            <SmoothScrollBar>
+              <PrivateRoute path="/explore/:id">
+                <ProductDetailPage />
+              </PrivateRoute>
+            </SmoothScrollBar>
             <Route exact path="*">
               <NotFound />
             </Route>

@@ -21,6 +21,7 @@ const PlaceOrder = () => {
         setOrderedProduct(rest);
       });
   }, [id]);
+  console.log(orderedProduct);
   const onSubmit = (data) => {
     let newData = {
       ...data,
