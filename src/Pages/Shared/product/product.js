@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  Button,
-  Card,
-  CardContent,
-  Grid,
-  Typography,
-  Box,
-} from "@mui/material";
+import { motion } from "framer-motion/dist/framer-motion";
+import { Button, CardContent, Grid, Typography, Box } from "@mui/material";
 import Rating from "react-rating";
 import { useHistory } from "react-router-dom";
 import "./product.css";
@@ -41,14 +35,12 @@ const AllProducts = ({ products, sliceNumber }) => {
       <Grid container spacing={3}>
         {products.slice(0, sliceNumber).map((product) => (
           <Grid key={product._id} item spacing={3} xs={12} sm={6} md={4}>
-            <Card
-              sx={{
-                maxWidth: 325,
-                boxShadow: 2,
-                mx: "auto",
-                borderRadius: "20px",
-              }}
+            <motion.div
               className="product-card"
+              whileHover={{
+                translateY: -15,
+                boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+              }}
             >
               <img
                 src={product.image}
@@ -109,7 +101,7 @@ const AllProducts = ({ products, sliceNumber }) => {
                   Purchase
                 </Button>
               </CardContent>
-            </Card>
+            </motion.div>
           </Grid>
         ))}
       </Grid>

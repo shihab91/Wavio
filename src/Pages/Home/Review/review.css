@@ -3,7 +3,6 @@
     height: 240px;
     border-radius: 50%;
     margin: 0 auto;
-
 }
 @media only screen  and (max-width:400px){ 
     .review-img{

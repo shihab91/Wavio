@@ -20,6 +20,11 @@
   margin-right: 20px;
   border-radius: 50%;
   text-align: left;
+  transition: all 0.1s ease;
+}
+.footer-icons:hover {
+  transform: translateY(-5px);
+
 }
 .subscribe {
   margin: 0.8rem 0;
@@ -33,13 +38,13 @@
 .subscribe:focus {
   outline: var(--color);
 }
-.footer-bg-wave{
-  fill:#120d48;
+.footer-bg-wave {
+  fill: #120d48;
   background-color: white;
 }
-.copyright-text{
-font-size: 13px;
-text-align: left;
-margin-top: 30px;
-color: #fff;
+.copyright-text {
+  font-size: 13px;
+  text-align: left;
+  margin-top: 30px;
+  color: #fff;
 }

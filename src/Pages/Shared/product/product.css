@@ -2,3 +2,10 @@
   background-color: var(--color) !important;
   color: white;
 }
+.product-card {
+  max-width: 325px;
+  margin: 0  auto;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: var(--box-shadow) !important;
+}

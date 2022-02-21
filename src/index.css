@@ -37,9 +37,6 @@ body {
 .rating {
   color: var(--color);
 }
-.product-card {
-  box-shadow: var(--box-shadow) !important;
-}
 .review-slider {
   box-shadow: var(--box-shadow) !important;
   border-radius: 15px;
@@ -77,7 +74,7 @@ input[type="number"] {
   /* background-color: #bcb4b4; */
 }
 .scroll-content {
-  background-color:white;
+  background-color: white;
 }
 .scrollbar-track.scrollbar-track-y {
   z-index: 101;

@@ -6,6 +6,7 @@ import img2 from "../../../images/flask.png";
 import img3 from "../../../images/glass.png";
 import img4 from "../../../images/certification.png";
 import { useHistory } from "react-router-dom";
+import { motion } from "framer-motion/dist/framer-motion";
 
 const data = [
   {
@@ -29,6 +30,16 @@ const data = [
     image: img4,
   },
 ];
+const storyIconVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.5,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+  },
+};
 const Story = () => {
   const history = useHistory();
   return (
@@ -59,9 +70,14 @@ const Story = () => {
               md={3}
               sx={{ mt: { xs: 6, md: 0 } }}
             >
-              <Paper className="story-card">
+              <motion.Paper
+                className="story-card"
+                variants={storyIconVariants}
+                animate="visible"
+                initial="hidden"
+              >
                 <img src={item.image} alt="" />
-              </Paper>
+              </motion.Paper>
               <h3 className="story-title">{item.title}</h3>
             </Grid>
           </>
