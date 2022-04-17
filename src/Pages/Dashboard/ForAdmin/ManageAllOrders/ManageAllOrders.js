@@ -10,8 +10,7 @@ const ManageAllProducts = () => {
     fetch("https://dry-springs-50521.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => {
-        setAllOrders(data);
-        console.log(data);
+        setAllOrders(data.reverse());
       });
   }, [isShipped, isDeleted]);
   const handleShipping = (id) => {

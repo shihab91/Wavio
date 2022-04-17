@@ -48,7 +48,7 @@ const ManageProducts = () => {
             <Card
               sx={{
                 boxShadow: 2,
-                mx: "auto",
+                // mx: "auto",
                 borderRadius: "20px",
                 display: "flex",
                 flexDirection: "row",

@@ -12,7 +12,7 @@ const HomeBanner = () => {
     backgroundColor: "white",
   };
   return (
-    <Container sx={{ py: { md: 9 } }}>
+    <Container sx={{ py: { sm: 5, md: 9 } }}>
       <Grid container spacing={4}>
         <Grid
           item
@@ -66,7 +66,8 @@ const HomeBanner = () => {
               display: "flex",
               gap: 4,
               flexDirection: { xs: "column", sm: "row" },
-              mt: { xs: 4, sm: 0 },
+              mt: 0,
+              mb: { xs: 4 },
             }}
           >
             <Button

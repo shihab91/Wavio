@@ -5,6 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./Navigation.css";
 import useAuth from "../../../hooks/useAuth";
+import { AnimatePresence } from "framer-motion/dist/framer-motion";
 const Navigation = () => {
   const buttonStyle = {
     fontFamily: "var(--nunito-font)",
@@ -13,6 +14,7 @@ const Navigation = () => {
     color: "black",
     textTransform: "none",
   };
+
   const { user, signOutUser } = useAuth();
   const [isActive, setIsActive] = useState(false);
   const handleToggleBtn = () => {
@@ -25,8 +27,8 @@ const Navigation = () => {
 
   const history = useHistory();
   return (
-    <Box className="navbar">
-      <Container sx={{ pb: 3, pt: 5, mb: 5 }}>
+    <Box className="navbar" sx={{ mb: { sm: 5 } }}>
+      <Container sx={{ pb: 3, pt: 5 }}>
         <Box
           sx={{
             display: "flex",
@@ -60,63 +62,67 @@ const Navigation = () => {
               <MenuIcon style={toggleBtn} className="toggle-button" />
             )}
           </Box>
-          <Box
-            className={`nav-links ${isActive ? "active" : ""}`}
-            sx={{ display: { xs: "none", md: "initial" } }}
-          >
+          <AnimatePresence>
             <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-                justifyContent: "center",
-                alignItems: "center",
-              }}
+              layout
+              className={`nav-links ${isActive ? "active" : "hidden"}`}
+              sx={{ display: { xs: "none", md: "initial" } }}
             >
-              <NavLink to="/home" className="navbar-link">
-                <Button style={buttonStyle}>Home</Button>
-              </NavLink>
-              <NavLink to="/explore" className="navbar-link">
-                <Button style={buttonStyle}>Explore</Button>
-              </NavLink>
-              {user.email && (
-                <NavLink to="/dashboard" className="navbar-link">
-                  <Button style={buttonStyle}>Dashboard</Button>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: { xs: "column", md: "row" },
+                  justifyContent: "center",
+                  alignItems: "center",
+                  py: { xs: 3, md: 0 },
+                }}
+              >
+                <NavLink to="/home" className="navbar-link">
+                  <Button style={buttonStyle}>Home</Button>
                 </NavLink>
-              )}
-              {user?.email ? (
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: { xs: "column", md: "row" },
-                    justifyContent: "center",
-                  }}
-                >
-                  <Button style={buttonStyle}>{user?.displayName}</Button>
-                  <Button
-                    style={buttonStyle}
-                    variant="contained"
-                    onClick={() => {
-                      signOutUser(history);
+                <NavLink to="/explore" className="navbar-link">
+                  <Button style={buttonStyle}>Explore</Button>
+                </NavLink>
+                {user.email && (
+                  <NavLink to="/dashboard" className="navbar-link">
+                    <Button style={buttonStyle}>Dashboard</Button>
+                  </NavLink>
+                )}
+                {user?.email ? (
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: { xs: "column", md: "row" },
+                      justifyContent: "center",
                     }}
-                    sx={{ backgroundImage: "var(--button-bg)" }}
                   >
-                    Log Out
-                  </Button>
-                </Box>
-              ) : (
-                <NavLink to="/login">
-                  <Button
-                    style={buttonStyle}
-                    variant="contained"
-                    sx={{ backgroundImage: "var(--button-bg)" }}
-                    className="button"
-                  >
-                    Login
-                  </Button>
-                </NavLink>
-              )}
+                    <Button style={buttonStyle}>{user?.displayName}</Button>
+                    <Button
+                      style={buttonStyle}
+                      variant="contained"
+                      onClick={() => {
+                        signOutUser(history);
+                      }}
+                      sx={{ backgroundImage: "var(--button-bg)" }}
+                    >
+                      Log Out
+                    </Button>
+                  </Box>
+                ) : (
+                  <NavLink to="/login">
+                    <Button
+                      style={buttonStyle}
+                      variant="contained"
+                      sx={{ backgroundImage: "var(--button-bg)" }}
+                      className="button"
+                    >
+                      Login
+                    </Button>
+                  </NavLink>
+                )}
+              </Box>
             </Box>
-          </Box>
+          </AnimatePresence>
         </Box>
       </Container>
     </Box>

@@ -1,7 +1,26 @@
-@media (max-width: 900px) {
+
+@media only screen and (max-width: 900px) {
   .nav-links {
-    width: 100%;
+    width: 90%;
+    max-width: 500px;
     margin-top: 25px;
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: absolute;
+    top: 80px;
+    z-index: 1;
+    transition:  0.3s ease transform ;
+  }
+  .hidden{
+    transform: translateY(calc(-100% - 80px));
+  }
+  .nav-links div{
+    border: none;
+    border-radius: 20px;
   }
   .toggle-button {
     margin-top: 17px;
@@ -11,6 +30,7 @@
   }
   .navbar-link {
     margin: 8px auto;
+    width: 100%;
   }
   .navbar-link:hover {
     background: var(--button-bg) !important;
