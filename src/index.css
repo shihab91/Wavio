@@ -83,3 +83,8 @@ input[type="number"] {
 .scrollbar-thumb-y {
   background: #ff0000 !important;
 }
+button{
+  border: none;
+  background: inherit;
+  cursor: pointer;
+}

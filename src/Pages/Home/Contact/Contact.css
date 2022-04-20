@@ -33,4 +33,5 @@ textarea:hover {
 .form input:focus,
 textarea:focus {
   transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
 }

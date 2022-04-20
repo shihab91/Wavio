@@ -2,6 +2,30 @@
   text-transform: none !important;
   font-size: 18px !important;
 }
-a.active button{
-  color:var(--color) !important;
+.dashboard-drawer {
+  display: flex;
+}
+a.active button {
+  color: var(--color) !important;
+}
+.dashboard-link {
+  color: white;
+  padding: 8px 16px;
+  margin: 1.5px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+.dashboard-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.dashboard-link-icon{
+  font-size: 35px;
+  margin-bottom: 2px;
+  padding-right: 10px;
+}
+.dashboard-link-icon path{
+  fill: white;
 }
