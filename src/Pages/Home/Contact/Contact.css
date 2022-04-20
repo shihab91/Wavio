@@ -18,7 +18,7 @@
 .form input,
 textarea {
   margin: 0.8rem 0;
-  width: 70%;
+  width: 75%;
   padding: 15px 20px;
   border: 1px solid #ccc;
   transition: transform 0.3s ease-in-out;
@@ -34,4 +34,11 @@ textarea:hover {
 textarea:focus {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow);
+}
+/* media queries */
+@media screen and (max-width: 768px) {
+  .form input,
+  textarea {
+    width: 80%;
+  }
 }

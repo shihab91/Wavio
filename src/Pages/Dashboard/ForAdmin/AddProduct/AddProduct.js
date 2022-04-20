@@ -25,12 +25,20 @@ const AddProduct = () => {
     marginTop: "2rem",
   };
   return (
-    <Container>
+    <Container
+      sx={{
+        p: { xs: 0, md: "24px" },
+      }}
+    >
       <Typography variant="h3" style={contactStyle}>
-        Add A <span style={{ color: "var(--color)" }}>PRODUCT</span>
+        Add <span style={{ color: "var(--color)" }}>PRODUCT</span>
       </Typography>
       <Box
-        sx={{ width: { xs: "90%", sm: "80%", md: "80%" }, mx: "auto", my: 4 }}
+        sx={{
+          width: { xs: "100%", sm: "100%", md: "80%" },
+          mx: "auto",
+          my: 4,
+        }}
         className="contact-form"
       >
         <Typography
