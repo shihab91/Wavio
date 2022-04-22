@@ -11,7 +11,7 @@ a.active {
 .dashboard-link {
   color: white;
   padding: 5px 16px;
-  margin: 1.5px 15px;
+  margin: 4px 15px;
   font-size: 16px;
   border-radius: 5px;
   transition: all 0.3s;

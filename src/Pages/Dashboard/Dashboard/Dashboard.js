@@ -32,7 +32,7 @@ import { GrNotes, GrUserAdmin } from "react-icons/gr";
 import { CgPlayListAdd } from "react-icons/cg";
 import { BiBox } from "react-icons/bi";
 import { BsBoxArrowInRight } from "react-icons/bs";
-import { MdOutlineReviews } from "react-icons/md";
+import { MdRateReview } from "react-icons/md";
 
 const drawerWidth = 250;
 
@@ -120,13 +120,13 @@ function Dashboard(props) {
             fontFamily: "var(--dosis-font)",
             display: "flex",
             flexDirection: "column",
-            ml: -8,
+            width: "100%",
             mt: 25,
             textTransform: "none",
           }}
         >
           <NavLink style={dashboardLink} to={`/`} className="dashboard-link">
-            <BiHomeAlt /> Home
+            <BiHomeAlt className="dashboard-link-icon" /> Home
           </NavLink>
           <NavLink
             style={dashboardLink}
@@ -140,7 +140,7 @@ function Dashboard(props) {
             to={`${url}/review`}
             className="dashboard-link"
           >
-            <MdOutlineReviews className="dashboard-link-icon" /> Review
+            <MdRateReview className="dashboard-link-icon" /> Review
           </NavLink>
           <button
             style={dashboardButton}
@@ -163,8 +163,10 @@ function Dashboard(props) {
       <AppBar
         position="fixed"
         sx={{
-          background: "rgb(240, 242, 245)",
           boxShadow: "none",
+          background: "rgba( 255, 255, 255, 0.4 )",
+          backdropFilter: " blur( 3px )",
+          border: "3px solid rgba( 255, 255, 255, 0.18 )",
           borderRadius: { sm: "15px" },
           width: { sm: `calc(100% - ${drawerWidth + 30}px)` },
           ml: { sm: `${drawerWidth + 15}px` },
