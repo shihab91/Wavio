@@ -24,6 +24,7 @@
     "react-smooth-scrollbar": "^8.0.6",
     "slick-carousel": "^1.8.1",
     "smooth-scrollbar": "^8.7.4",
+    "styled-components": "^5.3.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

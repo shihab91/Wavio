@@ -1,7 +1,7 @@
 import { Container, Grid, Typography, Box, Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { HomeBannerImg } from "../../../styles/HomeBanner.styles"; 
 const HomeBanner = () => {
   const bannerFontStyle = {
     fontFamily: "var(--dosis-font)",
@@ -112,7 +112,7 @@ const HomeBanner = () => {
           }}
           md={5}
         >
-          <img
+          <HomeBannerImg
             style={{ width: "70%" }}
             src="https://i.ibb.co/mHtBR9L/netclipart-1-516x1024.png"
             alt=""
